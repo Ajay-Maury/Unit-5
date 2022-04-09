@@ -1,0 +1,11 @@
+.greenText{
+    color : green;
+}
+
+.redText{
+    color : red;
+}
+button{
+    margin: 1%;
+    /* padding: 2%; */
+}
