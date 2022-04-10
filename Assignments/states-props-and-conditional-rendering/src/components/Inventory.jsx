@@ -5,20 +5,18 @@ export const Inventory = () => {
     books: 10,
     notebooks: 13,
     pens: 40,
-    // NO value given for inkpens  Can i add it as below
-    inkpens: 40,
   });
   // Create add and remove functions here that changes the
   // state.
   const counter = (key, val) => {
-    console.log(inv, key)
-    inv[key] = inv[key] + val
+    if (inv[key] <= 0 && val === -1) {
+      return
+    }
+    inv[key] = inv[key] + val;
     setInv({
       books: inv.books,
       notebooks: inv.notebooks,
       pens: inv.pens,
-      
-      inkpens: inv.inkpens,
     });
 }
 
@@ -115,7 +113,7 @@ export const Inventory = () => {
         <span>{inv.inkpens}</span>
       </div>
       {/*calculate total and show it*/}
-      total: {inv.inkpens + inv.pens + inv.notebooks + inv.books}
+      total: {inv.pens + inv.notebooks + inv.books}
     </div>
   );
 };
