@@ -43,7 +43,7 @@ function App() {
 
         <div>
           
-          Over:{`${(val.Ball / 6).toFixed(0)}.${val.Ball%6}   ${val.Ball/6}  ${val.Ball%6}`}
+          Over:{`${(val.Ball / 6).toFixed(0)}.${val.Ball%6}`}
           <h1 className="overCount">
             {
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
