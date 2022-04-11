@@ -25,30 +25,35 @@ function App() {
       <h3>India:</h3>
       <div className="banner">
         <div>
-          Score:{val.Score}
+          Score:{""}
           <h1 className="scoreCount">
             {
               // show "score" here
+              val.Score
             }
           </h1>
         </div>
         <div>
-          Wicket:{val.Wicket}
+          Wicket:{""}
           <h1 className="wicketCount">
             {
               // show wicket here
+              val.Wicket
             }
           </h1>
         </div>
 
         <div>
-          
-          Over:{`${(val.Ball / 6).toFixed(0)}.${val.Ball%6}`}
+          Over:
+          {""}
           <h1 className="overCount">
             {
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
+              
+               `${Math.floor(val.Ball/6)}.${val.Ball - Math.floor(val.Ball/6)*6}`
+              
             }
           </h1>
         </div>
@@ -98,11 +103,17 @@ function App() {
       <div className="addBall">
         Add ball
         {/* Increase the total number of balls thrown here. */}
-        <button onClick={()=>{change("Ball",1)}}>Add 1</button>
+        <button
+          onClick={() => {
+            change("Ball", 1);
+          }}
+        >
+          Add 1
+        </button>
       </div>
 
       {/* If score reaches greater than 100, show text "India Won" without quotes in h1 tag with class name 'status' */}
-      <h1>{val.Score > 100 ? "India Won":"" }</h1>
+      <h1>{val.Score > 100 ? "India Won" : ""}</h1>
     </div>
   );
 }
