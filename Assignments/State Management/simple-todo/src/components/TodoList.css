@@ -1,0 +1,13 @@
+.todolst{
+    background-color: white;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto auto;
+}
+.lstbtn{
+    background-color: gray;
+    border: 1px solid green
+
+}

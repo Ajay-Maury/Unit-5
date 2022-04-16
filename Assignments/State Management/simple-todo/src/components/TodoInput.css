@@ -1,0 +1,10 @@
+.todoinptbtn input, button{
+    background-color: hsl(94, 12%, 52%);
+    color : white;
+    padding: 0.5%;
+    border: none;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
