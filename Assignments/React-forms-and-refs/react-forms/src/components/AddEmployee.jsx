@@ -12,6 +12,15 @@ const AddEmployee = () => {
         
     })
 
+  const [isChecked, setIsChecked] = useState(true)
+
+  function handleCheck(e) {
+    console.log(e.target.value)
+    setEmployee({ ...employee, maritalStatus: e.target.value });
+    console.log(employee)
+    setIsChecked(!isChecked)
+  }
+
     function handleSubmit(e) {
       // e.preventDefault()
         console.log(employee)
@@ -61,17 +70,19 @@ const AddEmployee = () => {
                 </td>
               </tr>
               <tr>
-                <th>Select Department :  </th>
+                <th>Select Department : </th>
                 <td>
                   <select
                     onChange={handleChange}
-                    value={""} 
+                    value={""}
                     name="department"
                     className="department"
                   >
-                    {/* <option value="Select Department">Select Department</option> */}
+                    <option value="Select Department">Select Department</option>
                     <option value="Computer Science">Computer Science</option>
-                    <option value="Informstion Technology">Information Technology</option>
+                    <option value="Information Technology">
+                      Information Technology
+                    </option>
                     <option value="Civil">Civil</option>
                     <option value="Electrical">Electrical</option>
                   </select>
@@ -104,21 +115,23 @@ const AddEmployee = () => {
               <tr>
                 <th> Marital Status : </th>
                 <td>
-                  Married 
+                  Married
                   <input
-                    onClick={handleChange}
+                    onClick={handleCheck}
                     name="maritalStatus"
                     className="Married"
                     type="checkbox"
-                    value={"Married"}
+                    value={isChecked ? "Married" : ""}
                   />
-                  Unmarried 
+                  Unmarried
                   <input
-                    onChange={handleChange}
+                    onClick={handleCheck}
+                    // onClick={handleChange}
                     name="maritalStatus"
                     className="Unmarried"
                     type="checkbox"
-                    value={"Unmarried"}
+                    // check = {isChecked}
+                    value={isChecked?"unmarried":""}
                   />
                 </td>
               </tr>

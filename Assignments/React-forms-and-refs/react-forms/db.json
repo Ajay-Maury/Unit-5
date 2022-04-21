@@ -1,58 +1,13 @@
 {
   "employee": [
     {
-      "id": 1,
       "name": "Ajay",
-      "age": 22,
-      "address": "U P",
-      "department": "Computer Science",
-      "salary": "9",
-      "maritalStatus": "Unmarried"
-    },
-    {
-      "id": 2,
-      "name": "Ajay Maurya",
-      "age": 22,
-      "address": "U P",
-      "department": "Computer Science",
-      "salary": "9",
-      "maritalStatus": "Unmarried"
-    },
-    {
-      "name": "Rishab",
       "age": "23",
-      "address": "M P",
-      "department": "Informstion Technology",
-      "salary": "50000",
-      "maritalStatus": "Unmarried",
-      "id": 3
-    },
-    {
-      "name": "Rahul",
-      "age": "26",
       "address": "U P",
-      "department": "Civil",
-      "salary": "80000",
-      "maritalStatus": "Married",
-      "id": 4
-    },
-    {
-      "name": "Ramesh",
-      "age": "24",
-      "address": "U P",
-      "department": "Electrical",
-      "salary": "6000",
-      "maritalStatus": "Married",
-      "id": 5
-    },
-    {
-      "name": "Mohan",
-      "age": "52",
-      "address": "U P",
-      "department": "Electrical",
-      "salary": "40000",
-      "maritalStatus": "Married",
-      "id": 6
+      "department": "Computer Science",
+      "salary": "800000",
+      "maritalStatus": "unmarried",
+      "id": 1
     }
   ]
 }
