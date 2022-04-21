@@ -1,10 +1,19 @@
 import { useState } from "react";
-
+import "./TodoInput.css"
+import {HiPlus} from "react-icons/hi"
 export const TodoInput = ({ getData }) => {
   const [text, setText] = useState("");
 
   return (
-    <div>
+    <div className="todoinptbtn">
+      <button
+        onClick={() => {
+          getData(text);
+        }}
+      >
+        <HiPlus />
+        
+      </button>
       <input
         onChange={(e) => {
           setText(e.target.value);
@@ -12,14 +21,6 @@ export const TodoInput = ({ getData }) => {
         type="text"
         placeholder="Enter Todo"
       />
-
-      <button
-        onClick={() => {
-          getData(text);
-        }}
-      >
-        Add todo
-      </button>
     </div>
   );
 };

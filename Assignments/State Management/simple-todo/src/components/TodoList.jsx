@@ -6,16 +6,19 @@ function TodoList() {
   // const [todoList, setTodoList] = useState(["a", "b"])
   const [todoList, setTodoList] = useState([]);
   const getData = (todo) => {
-    console.log(todoList, todo)
-    let x = {title : {todo},status:false}
-    setTodoList([...todoList, x]);
+    setTodoList([...todoList, todo]);
   };
   return (
     <>
       <div>
         <TodoInput getData={getData} />
         {todoList.map((e) => (
-          <div className="todolst">{e.title} <button className="lstbtn">Api</button></div>
+          <div className="todolst">
+            <div className="item"> {e}</div>
+            <div className="lstbtn">
+              <input type="checkbox" />
+            </div>
+          </div>
         ))}
       </div>
     </>
