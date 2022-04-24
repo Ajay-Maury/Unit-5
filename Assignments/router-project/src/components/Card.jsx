@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const GridBox = styled.div`
   width: 90%;
-  border: 1px solid red;
+  ${'' /* border: 1px solid red; */}
   margin: auto auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
