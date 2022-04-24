@@ -27,7 +27,7 @@ function App() {
         <Route path="/mens" element={<MensProduct/>}></Route>
         <Route path="/womens" element={<WomensProduct/>}></Route>
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }

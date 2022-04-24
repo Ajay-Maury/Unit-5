@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Card, GridBox } from "./Card";
-import { Footer } from "./Footer";
 
 export const Cart = () => {
   const [cartData, setCartData] = useState([]);
@@ -66,7 +65,6 @@ export const Cart = () => {
           </Card>
         ))}
       </GridBox>
-      <Footer />
     </div>
   );
 };

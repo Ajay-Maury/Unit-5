@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Card, GridBox } from "./Card";
-import { Footer } from "./Footer";
 
 export const WomensProduct = () => {
   const [womenData, setWomenData] = useState([]);
@@ -66,7 +65,6 @@ export const WomensProduct = () => {
           </Card>
         ))}
       </GridBox>
-      <Footer />
     </div>
   );
 };
