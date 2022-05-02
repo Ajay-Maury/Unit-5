@@ -32,7 +32,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/neworders"
+          path="/neworder"
           element={
             <ProtectedRoute>
               <NewOrder />
